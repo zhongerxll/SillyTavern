@@ -238,7 +238,7 @@ const default_settings = {
     top_p_openai: 1.0,
     top_k_openai: 0,
     min_p_openai: 0,
-    top_a_openai: 1,
+    top_a_openai: 0,
     repetition_penalty_openai: 1,
     stream_openai: false,
     websearch_cohere: false,
@@ -318,7 +318,7 @@ const oai_settings = {
     top_p_openai: 1.0,
     top_k_openai: 0,
     min_p_openai: 0,
-    top_a_openai: 1,
+    top_a_openai: 0,
     repetition_penalty_openai: 1,
     stream_openai: false,
     websearch_cohere: false,
@@ -3048,6 +3048,7 @@ function loadOpenAISettings(data, settings) {
     oai_settings.names_behavior = settings.names_behavior ?? default_settings.names_behavior;
     oai_settings.continue_postfix = settings.continue_postfix ?? default_settings.continue_postfix;
     oai_settings.function_calling = settings.function_calling ?? default_settings.function_calling;
+    oai_settings.openrouter_providers = settings.openrouter_providers ?? default_settings.openrouter_providers;
 
     // Migrate from old settings
     if (settings.names_in_completion === true) {
